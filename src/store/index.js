@@ -84,6 +84,9 @@ export default createStore({
     },
     REMOVE_FROM_CART(state, dishId) {
       state.cart = state.cart.filter(item => item.dish.id !== dishId)
+    },
+    CLEAR_CART(state) {
+      state.cart = []
     }
   },
   actions: {
